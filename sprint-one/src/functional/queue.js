@@ -10,7 +10,7 @@ var Queue = function(){
   // Implement the methods below
 
   someInstance.enqueue = function(value){
-    console.log('storage before enqueue:', storage, 'size before:',size)
+    // console.log('storage before enqueue:', storage, 'size before:',size)
     if(storage[size]){
       size++;
       storage[size]=value;
@@ -21,12 +21,12 @@ var Queue = function(){
   }
 
 
-    console.log('storage after enqueue:', storage, 'size after:',size)
+    // console.log('storage after enqueue:', storage, 'size after:',size)
     };
 
   someInstance.dequeue = function(){
     if (size > 0){
-      console.log('storage before dequeue:', storage, 'size before:',size)
+      // console.log('storage before dequeue:', storage, 'size before:',size)
 
       var element = storage[firstElement]
       delete storage[firstElement]
@@ -37,7 +37,7 @@ var Queue = function(){
       if (size === 0){
         firstElement = 0;
       }
-      console.log('storage after dequeue:', storage,'size after:',size)
+      // console.log('storage after dequeue:', storage,'size after:',size)
 
       return element;
 
