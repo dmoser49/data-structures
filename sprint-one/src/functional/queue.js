@@ -10,20 +10,21 @@ var Queue = function(){
   // Implement the methods below
 
   someInstance.enqueue = function(value){
+    console.log('storage before',storage[size])
 
     storage[size] = value;
     size++;
+    console.log('storage after',storage[size])
   };
 
   someInstance.dequeue = function(){
     if (size > 0){
-      size--;
       var element = storage[firstElement];
       delete storage[firstElement];
-      if (size > 0) {
-        firstElement++;
-      }
-    console.log(element)      //console.log(firstElement)
+      firstElement++;
+      size--;
+
+    console.log(storage, element)
       return element;
 
     }
